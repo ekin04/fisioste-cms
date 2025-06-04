@@ -1,0 +1,89 @@
+{
+  "convenzioni": [
+    {
+      "nome": "Uni Salute",
+      "url": "https://www.unisalute.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/0/immagine.jpg"
+    },
+    {
+      "nome": "Fondo Altea",
+      "url": "https://www.fondoaltea.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/1/immagine.jpg"
+    },
+    {
+      "nome": "Fondo Est",
+      "url": "https://www.fondoest.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/2/immagine.jpg"
+    },
+    {
+      "nome": "San.Arti.",
+      "url": "https://www.sanarti.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/3/immagine.jpg"
+    },
+    {
+      "nome": "SaniModa",
+      "url": "https://www.sanimoda.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/4/immagine.jpg"
+    },
+    {
+      "nome": "Intesa San Paolo",
+      "url": "https://www.intesasanpaolo.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/5/immagine.jpg"
+    },
+    {
+      "nome": "XME Salute",
+      "url": "https://www.xmesalute.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/6/immagine.jpg"
+    },
+    {
+      "nome": "Sani Edil",
+      "url": "https://www.saniedil.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/7/immagine.jpg"
+    },
+    {
+      "nome": "Caspie",
+      "url": "https://www.caspie.eu/",
+      "immagine": "/img/cms/convenzioni/convenzioni/8/immagine.jpg"
+    },
+    {
+      "nome": "RBM assicurazione",
+      "url": "https://www.intesasanpaolorbmsalute.com/",
+      "immagine": "/img/cms/convenzioni/convenzioni/9/immagine.jpg"
+    },
+    {
+      "nome": "Previmedical",
+      "url": "https://www.previmedical.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/10/immagine.jpg"
+    },
+    {
+      "nome": "Blue Assistance",
+      "url": "https://www.blueassistance.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/11/immagine.jpg"
+    },
+    {
+      "nome": "Fasdac",
+      "url": "https://www.fasdac.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/12/immagine.jpg"
+    },
+    {
+      "nome": "MetaSalute",
+      "url": "https://www.fondometasalute.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/13/immagine.jpg"
+    },
+    {
+      "nome": "Fasiil",
+      "url": "https://www.fasiil.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/14/immagine.jpg"
+    },
+    {
+      "nome": "Coop Salute",
+      "url": "https://www.coopersalute.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/15/immagine.jpg"
+    },
+    {
+      "nome": "Campa",
+      "url": "https://www.campa.it/",
+      "immagine": "/img/cms/convenzioni/convenzioni/16/immagine.gif"
+    }
+  ]
+}

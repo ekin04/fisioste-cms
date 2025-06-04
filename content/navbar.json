@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "label": "Home",
+      "path": "/",
+      "children": []
+    },
+    {
+      "label": "Vision & Mission",
+      "path": "/vision-e-mission",
+      "children": []
+    },
+    {
+      "label": "Servizi",
+      "path": "/servizi",
+      "children": []
+    },
+    {
+      "label": "Blog",
+      "path": "/blog",
+      "children": []
+    },
+    {
+      "label": "Contatti",
+      "path": "/contatti",
+      "children": []
+    }
+  ]
+}

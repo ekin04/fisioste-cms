@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@theme {
+    --color-primary: #5a73b5;
+    --color-secondary: #264193;
+    --color-menuText: #818181,
+}
+@layer base {
+    h1 {
+        @apply lg:text-[60px] md:text-[48px] text-[35px] font-light;
+    }
+    h2{
+        @apply lg:text-[20px] md:text-[17px] text-[14px];
+    }
+    p{
+       /*  @apply text-[14px]; */
+    }
+    button{
+        @apply text-[14px]
+    }
+    .container{
+        @apply max-w-xl;
+    }
+
+}
+
+@layer utilities {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    #nome::placeholder, #email::placeholder, #number::placeholder{
+        color: white ;
+    }
+    #newsletter::placeholder{
+        color: #264193;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "slide": [
+    {
+      "immagine": "/img/cms/home/slide/0/immagine.webp",
+      "alt": "Fisioterapista al lavoro"
+    },
+    {
+      "immagine": "/img/cms/home/slide/1/immagine.webp",
+      "alt": "Fisioterapista che spiega"
+    },
+    {
+      "immagine": "/img/cms/home/slide/2/immagine.webp",
+      "alt": "Massaggio fisioterapista"
+    }
+  ]
+}
