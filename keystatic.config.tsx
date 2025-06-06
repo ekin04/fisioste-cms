@@ -1,17 +1,35 @@
-import { config, collection, fields, singleton } from "@keystatic/core";
-import { url } from "inspector";
+import { config, collection, fields, singleton, LocalConfig, CloudConfig } from "@keystatic/core";
+import settingsData from "./content/settings.json";
+
 
 export const markdocConfig = fields.markdoc.createMarkdocConfig({});
+const isProd = process.env.NODE_ENV === "production";
+
+const localMode: LocalConfig['storage'] = {
+  kind: "local",
+}
+const remoteMode: CloudConfig['storage'] = {
+  kind: "cloud",
+  pathPrefix: 'prod'
+}
 
 export default config({
-  storage: {
-    kind: "local",
+  storage: isProd ? remoteMode : localMode,
+  cloud: {
+    project:"fisioste/fisioste-cms"
+    
   },
   ui: {
+    brand: {
+      name:"Fisioste CMS",
+      mark: () => {
+        return <img src={settingsData.logo} height={40} width={40} alt={"Logo"} />
+      }
+    },
     navigation: {
       Contenuti: ["blog", "servizi"],
       Pagine: ["home", "testimonial", "convenzioni"],
-      Impostazioni: ["settings", "navbar"],
+      Impostazioni: ["settings"], 
     },
   },
   singletons: {
@@ -64,6 +82,13 @@ export default config({
             "Immagine che compare quando viene condivisa una pagina del sito che non ha un immagine di copertina",
           directory: "public/",
           publicPath: "/",
+          validation: { isRequired: true },
+        }),
+        logo: fields.image({
+          label: "Logo",
+          description: "Logo del sito",
+          directory: "public/img/loghi",
+          publicPath: "/img/loghi",
           validation: { isRequired: true },
         }),
       },

@@ -10,13 +10,13 @@ export const SpecialistiBenessere: React.FC<
   return (
     <div className="w-full bg-[#e1edff] pt-16 pb-16 flex justify-center">
       <div className="container text-center">
-        <h3 className="text-secondary text-4xl font-light md:text-6xl">
+        <h3 className="text-4xl font-light text-secondary md:text-6xl">
           {/*Specialisti del <span className="text-secondary">benessere</span>*/}
           Siamo specializzati in
         </h3>
-        <div className=" mx-auto max-w-md lg:max-w-none lg:grid lg:grid-cols-3 lg:gap-16 mt-16 lg:px-10">
+        <div className="max-w-md mx-auto mt-16 lg:max-w-none lg:grid lg:grid-cols-3 lg:gap-16 lg:px-10">
           <div
-            className="flex flex-col justify-between items-center mb-16 lg:mb-0"
+            className="flex flex-col items-center justify-between mb-16 lg:mb-0"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
@@ -35,7 +35,7 @@ export const SpecialistiBenessere: React.FC<
             </h2>
             <div>
               <div className="p-5 rounded-2xl bg-white mt-3 flex items-center lg:min-h-[140px]">
-                <p className="text-secondary text-base">
+                <p className="text-base text-secondary">
                   Per combattere tutte le cause del mal di schiena: Ernia del
                   disco, disfunzioni di movimento, alterazioni posturali,
                   stress, artrosi.
@@ -49,7 +49,7 @@ export const SpecialistiBenessere: React.FC<
             </div>
           </div>
           <div
-            className="flex flex-col justify-between items-center mb-16 lg:mb-0"
+            className="flex flex-col items-center justify-between mb-16 lg:mb-0"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="500"
@@ -60,7 +60,6 @@ export const SpecialistiBenessere: React.FC<
                 src={"/img/cms/home/fisioestetica.webp"}
                 width="180"
                 height="180"
-                layout="fixed"
                 alt="Fisioste fisioestetica"
                 className="rounded-full w-[180px] h-[180px]"
               />
@@ -70,7 +69,7 @@ export const SpecialistiBenessere: React.FC<
             </h2>
             <div>
               <div className="p-5 rounded-2xl bg-white mt-3 flex items-center lg:min-h-[140px]">
-                <p className="text-secondary text-base">
+                <p className="text-base text-secondary">
                   Trattamento di: cellulite, tessuto adiposo localizzato,
                   smagliature dimagrimento, gambe gonfie e pesanti, acne, invecchiamento cutaneo.
                 </p>
@@ -84,7 +83,7 @@ export const SpecialistiBenessere: React.FC<
           </div>
 
           <div
-            className="flex flex-col justify-between items-center mb-16 lg:mb-0"
+            className="flex flex-col items-center justify-between mb-16 lg:mb-0"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-once="true"
@@ -94,7 +93,6 @@ export const SpecialistiBenessere: React.FC<
                 src={"/img/cms/home/pavimento-pelvico.webp"}
                 width="180"
                 height="180"
-                layout="fixed"
                 alt="Fisioste Riabilitazione pavimento pelvico"
                 className="rounded-full w-[180px] h-[180px]"
               />
@@ -104,7 +102,7 @@ export const SpecialistiBenessere: React.FC<
             </h2>
             <div>
               <div className="p-5 rounded-2xl bg-white mt-3 flex items-center lg:min-h-[140px]">
-                <p className="text-secondary text-base">
+                <p className="text-base text-secondary">
                 È una branca della fisioterapia che si occupa della cura e della prevenzione delle condizioni che possono presentarsi sia nel sesso femminile che in quello maschile.
                 </p>
               </div>
