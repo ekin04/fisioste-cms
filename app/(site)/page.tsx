@@ -8,7 +8,6 @@ export default async function Homepage() {
       <HeroHome />
       <SpecialistiBenessere />
       <ElencoServizi />
-
     </>
   );
 }

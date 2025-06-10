@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FaPhone, FaStar } from "react-icons/fa";
 import { GiSmartphone } from "react-icons/gi";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { CaroselloHomeHero } from "./CaroselloHomeHero";
 import Image from "next/image";

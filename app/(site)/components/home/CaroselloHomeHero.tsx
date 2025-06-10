@@ -23,7 +23,7 @@ export const CaroselloHomeHero: React.FC<CaroselloHomeHeroProps> = () => {
         loop
         allowTouchMove={false}
         speed={1000}
-        className="w-full rounded-3xl shadow-lg overflow-hidden"
+        className="w-full overflow-hidden shadow-lg rounded-3xl"
       >
         {sliderData.slide.map((item, index) => (
           <SwiperSlide key={index}>

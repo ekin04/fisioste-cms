@@ -1,42 +1,102 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @theme {
-    --color-primary: #5a73b5;
-    --color-secondary: #264193;
-    --color-menuText: #818181,
+  --color-primary: #5a73b5;
+  --color-secondary: #264193;
+  --color-menuText: #818181;
 }
 @layer base {
-    h1 {
-        @apply lg:text-[60px] md:text-[48px] text-[35px] font-light;
-    }
-    h2{
-        @apply lg:text-[20px] md:text-[17px] text-[14px];
-    }
-    p{
-       /*  @apply text-[14px]; */
-    }
-    button{
-        @apply text-[14px]
-    }
-    .container{
-        @apply max-w-xl;
-    }
-
+  h1 {
+    @apply lg:text-[60px] md:text-[48px] text-[35px] font-light;
+  }
+  h2 {
+    @apply lg:text-[20px] md:text-[17px] text-[14px];
+  }
+  p {
+    /*  @apply text-[14px]; */
+  }
+  button {
+    @apply text-[14px];
+  }
+  .container {
+    @apply max-w-xl;
+  }
+  
 }
 
 @layer utilities {
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-    input[type=number] {
-        -moz-appearance: textfield;
-    }
-    #nome::placeholder, #email::placeholder, #number::placeholder{
-        color: white ;
-    }
-    #newsletter::placeholder{
-        color: #264193;
-    }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  #nome::placeholder,
+  #email::placeholder,
+  #number::placeholder {
+    color: white;
+  }
+  #newsletter::placeholder {
+    color: #264193;
+  }
+}
+
+/* cookie consent style */
+#cc-main  {
+    color-scheme: light;
+
+    --cc-bg: #f9faff;
+    --cc-primary-color: #112954;
+    --cc-secondary-color: #112954;
+
+    --cc-btn-primary-bg: #264193;
+    --cc-btn-primary-color: white;
+    --cc-btn-primary-hover-bg: #213657;
+    --cc-btn-primary-hover-color: #fff;
+
+    --cc-btn-secondary-bg: #dfe7f9;
+    --cc-btn-secondary-color: var(--cc-secondary-color);
+    --cc-btn-secondary-hover-bg: #c6d1ea;
+    --cc-btn-secondary-hover-color: #000;
+
+    --cc-cookie-category-block-bg: #ebeff9;
+    --cc-cookie-category-block-border: #ebeff9;
+    --cc-cookie-category-block-hover-bg: #dbe5f9;
+    --cc-cookie-category-block-hover-border: #dbe5f9;
+    --cc-cookie-category-expanded-block-hover-bg: #ebeff9;
+    --cc-cookie-category-expanded-block-bg: #ebeff9;
+
+    --cc-overlay-bg: rgba(219, 232, 255, 0.85)!important;
+
+    --cc-toggle-readonly-bg: #cbd8f1;
+    --cc-toggle-on-knob-bg: var(--cc-bg);
+    --cc-toggle-on-bg: #264193;
+    --cc-toggle-off-bg: #8fa8d6;
+    --cc-toggle-readonly-knob-bg: var(--cc-bg);
+
+    --cc-separator-border-color: #f1f3f5;
+
+    --cc-footer-border-color: #f1f3f5;
+    --cc-footer-bg: var(--cc-bg);
+
+    --cc-btn-border-radius: 1rem .6rem 1.3rem .5rem / .5rem 1rem;
+    --cc-modal-border-radius: var(--cc-btn-border-radius);
+    --cc-pm-toggle-border-radius: var(--cc-btn-border-radius);
+}
+
+.cc--light-funky #cc-main .toggle__icon:after {
+    border-radius: var(--cc-btn-border-radius);
+}
+
+.cc--light-funky #cc-main .cm__btn--close {
+    border-radius: var(--cc-btn-border-radius);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* whatsapp */
+.styles-module_chatHeader__gaeOA .styles-module_avatar__afcc4 img {
+background-color: white;
 }

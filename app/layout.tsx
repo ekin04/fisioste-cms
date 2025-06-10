@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 import './globals.css';
 import { Roboto } from 'next/font/google';
 import { AOSInit } from '@components/shared/AOSInit';
-
 const roboto = Roboto({
   subsets: ['latin'],
 })
@@ -11,7 +10,7 @@ const roboto = Roboto({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="it">
+    <html lang="it" className="scroll-smooth">
       <AOSInit />
       <body className={roboto.className}>
         {children}
