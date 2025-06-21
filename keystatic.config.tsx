@@ -1,35 +1,42 @@
-import { config, collection, fields, singleton, LocalConfig, CloudConfig } from "@keystatic/core";
+import {
+  config,
+  collection,
+  fields,
+  singleton,
+  LocalConfig,
+  CloudConfig,
+} from "@keystatic/core";
 import settingsData from "./content/settings.json";
-
 
 export const markdocConfig = fields.markdoc.createMarkdocConfig({});
 const isProd = process.env.NODE_ENV === "production";
 
-const localMode: LocalConfig['storage'] = {
+const localMode: LocalConfig["storage"] = {
   kind: "local",
-}
-const remoteMode: CloudConfig['storage'] = {
+};
+const remoteMode: CloudConfig["storage"] = {
   kind: "cloud",
-  pathPrefix: 'prod'
-}
+  pathPrefix: "prod",
+};
 
 export default config({
   storage: isProd ? remoteMode : localMode,
   cloud: {
-    project:"fisioste/fisioste-cms"
-    
+    project: "fisioste/fisioste-cms",
   },
   ui: {
     brand: {
-      name:"Fisioste CMS",
+      name: "Fisioste CMS",
       mark: () => {
-        return <img src={settingsData.logo} height={40} width={40} alt={"Logo"} />
-      }
+        return (
+          <img src={settingsData.logo} height={40} width={40} alt={"Logo"} />
+        );
+      },
     },
     navigation: {
       Contenuti: ["blog", "servizi"],
       Pagine: ["home", "testimonial", "convenzioni"],
-      Impostazioni: ["settings"], 
+      Impostazioni: ["settings"],
     },
   },
   singletons: {
@@ -201,13 +208,14 @@ export default config({
       slugField: "title",
       columns: ["title", "id"],
       path: "content/servizi/*",
+      entryLayout: "content",
       format: { contentField: "content" },
 
       schema: {
         title: fields.slug({ name: { label: "Title" } }),
         id: fields.number({
           label: "ID",
-          description: "Posizione nella lista dei servizi",
+          description: "Posizione nella lista dei servizi, nella home verranno mostrati solo i primi 10 servizi",
           validation: { isRequired: true },
         }),
         description: fields.text({
@@ -218,9 +226,17 @@ export default config({
         }),
         image: fields.image({
           label: "Immagine in evidenza",
+          description:"Immagine che compare nella griglia dei servizi",
           directory: "public/img/cms/servizi",
           publicPath: "/img/cms/servizi",
           validation: { isRequired: true },
+        }),
+        image_internal: fields.image({
+          label: "Immagine interna al servizio",
+          directory: "public/img/cms/servizi",
+          publicPath: "/img/cms/servizi",
+          description:
+            "Immagine che compare all'interno del servizio, sotto il titolo",
         }),
         content: fields.markdoc({
           label: "Contenuto del servizio",
@@ -239,6 +255,7 @@ export default config({
       label: "📖 Blog",
       slugField: "title",
       path: "content/blog/*",
+      entryLayout: "content",
       columns: ["title", "publishDate"],
       format: { contentField: "content" },
       schema: {
@@ -266,10 +283,17 @@ export default config({
           },
         }),
         image: fields.image({
-          label: "Immagine",
+          label: "Immagine in evidenza",
           directory: "public/img/cms/blog",
           publicPath: "/img/cms/blog",
           validation: { isRequired: true },
+        }),
+        image_internal: fields.image({
+          label: "Immagine interna al post",
+          directory: "public/img/cms/blog",
+          publicPath: "/img/cms/blog",
+          description:
+            "Immagine che compare all'interno del post, sotto il titolo",
         }),
       },
     }),

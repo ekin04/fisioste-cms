@@ -6,3 +6,6 @@ export const blog = (await reader.collections.blog.all())
 export const servizi = (await reader.collections.servizi.all())
   .filter((p) => p.entry?.id !== undefined)
   .sort((a, b) => a.entry.id - b.entry.id);
+
+
+export const serviziTitles= servizi.map((s) => s.entry.title);

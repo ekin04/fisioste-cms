@@ -24,7 +24,7 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({}) => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
       windowHeight > 300
-        ? setStickyClass("bg-white fixed top-0 left-0 z-50 transform duration-300")
+        ? setStickyClass("bg-white fixed top-0 left-0 z-40 transform duration-300")
         : setStickyClass("relative");
     }
   };
@@ -32,8 +32,8 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({}) => {
 
   return (
     <>
-      <div className="w-full bg-white hidden md:block">
-        <div className="container px-4 m-auto hidden lg:flex py-3 justify-between">
+      <div className="hidden w-full bg-white md:block">
+        <div className="container justify-between hidden px-4 py-3 m-auto lg:flex">
           <Link href="/">
             <div className="flex items-center hover:cursor-pointer">
               <Image
@@ -53,7 +53,7 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({}) => {
             </div>
           </Link>
           <div className="flex">
-            <div className="hidden 2xl:flex items-center mr-6">
+            <div className="items-center hidden mr-6 2xl:flex">
               <Image
                 src={"/img/loghi/clock1.png"}
                 width="50"
@@ -106,7 +106,7 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({}) => {
               </div>
             </div>
 
-            <div className="items-center flex ">
+            <div className="flex items-center ">
               <Image
                 src={"/img/loghi/pin1.png"}
                 width="50"
@@ -131,8 +131,8 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({}) => {
           </div>
         </div>
 
-        <div className={`w-full border-2 border-gray-300 ${stickyClass}`}>
-          <div className="container m-auto px-8 items-center justify-between hidden md:flex">
+        <div className={`w-full border-2 border-gray-300 ${stickyClass}`} id="navbar">
+          <div className="container items-center justify-between hidden px-8 m-auto md:flex">
             <nav className="py-4">
               {dataNavbar.items.map((item, index) => (
                 <Link
@@ -147,7 +147,7 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({}) => {
               ))}
             </nav>
 
-            <div className="flex w-1/5 border-l-2 border-gray-300 py-4 pl-8 justify-end md:justify-end">
+            <div className="flex justify-end w-1/5 py-4 pl-8 border-l-2 border-gray-300 md:justify-end">
               <a
                 href={dataSettings.facebook}
                 target="_blank"
@@ -156,7 +156,7 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({}) => {
               >
                 <FaFacebookF
                   size="20px"
-                  className="hover:cursor-pointer hover:opacity-70 text-secondary transition"
+                  className="transition hover:cursor-pointer hover:opacity-70 text-secondary"
                 />
               </a>
 
@@ -167,7 +167,7 @@ export const DesktopMenu: React.FC<DesktopMenuProps> = ({}) => {
               >
                 <FaInstagram
                   size="20px"
-                  className="hover:cursor-pointer hover:opacity-70 text-secondary transition"
+                  className="transition hover:cursor-pointer hover:opacity-70 text-secondary"
                 />
               </a>
             </div>

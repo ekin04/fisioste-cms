@@ -8,7 +8,7 @@ export const SpecialistiBenessere: React.FC<
   SpecialistiBenessereProps
 > = ({}) => {
   return (
-    <div className="w-full bg-[#e1edff] pt-16 pb-16 flex justify-center">
+    <div className="w-full bg-[#e1edff] pt-16 pb-16 px-6 flex justify-center">
       <div className="container text-center">
         <h3 className="text-4xl font-light text-secondary md:text-6xl">
           {/*Specialisti del <span className="text-secondary">benessere</span>*/}

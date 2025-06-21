@@ -3,10 +3,12 @@ import Markdoc from "@markdoc/markdoc";
 import Image from "next/image";
 import { reader } from "../../../reader";
 import { markdocConfig } from "../../../../keystatic.config";
-import { servizi } from "@/app/api/keystatic/Collection";
+import { servizi, serviziTitles } from "@/app/api/keystatic/Collection";
 import ReadBar from "@components/articoli/ReadBar";
 import Link from "next/link";
 import { Carosello } from "../../components/shared/Carosello";
+import ContactFormModal from "../../components/shared/ContactFormModal";
+
 
 export default async function Servizi(props: {
   params: Promise<{ slug: string }>;
@@ -37,51 +39,52 @@ export default async function Servizi(props: {
 
       <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
         {/* Hero Section with Square Image */}
-        <div className="relative overflow-hidden py-16 md:py-24">
+        <div className="relative py-16 overflow-hidden md:py-24">
           <div className="absolute inset-0 bg-gradient-to-br from-[#264193]/10 to-[#5a73b5]/5 z-0"></div>
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#264193]/5 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-[#5a73b5]/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="w-full md:w-2/5 flex justify-center">
+          <div className="container relative z-10 px-4 mx-auto">
+            <div className="flex flex-col items-center gap-8 mx-auto md:flex-row md:gap-12">
+              <div className="flex justify-center w-full md:w-3/5">
                 <div className="relative">
                   <div className="absolute -inset-1 bg-gradient-to-br from-[#264193] to-[#5a73b5] rounded-lg blur opacity-30"></div>
                   <div className="relative">
                     <Image
-                      src={post.image}
+                      src={post.image_internal ? post.image_internal : post.image}
                       alt={post.title}
-                      width={400}
-                      height={400}
-                      className="rounded-lg shadow-xl object-cover"
+                      width={800}
+                      height={800}
+                      className="object-cover rounded-lg shadow-xl"
                       priority
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="w-full md:w-3/5 text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <div className="w-full text-center md:w-3/5 md:text-left">
+                <h1 className="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
                   <span className="bg-gradient-to-r from-[#264193] to-[#5a73b5] bg-clip-text text-transparent">
                     {post.title}
                   </span>
                 </h1>
 
-                <p className="text-lg px-3 md:px-0 text-pretty text-gray-600 mb-8">
+                <p className="px-3 mb-8 text-lg text-gray-600 md:px-0 text-pretty">
                   {post.description}
                 </p>
 
-                <div className="h-1 mx-auto md:mx-0 w-32 bg-gradient-to-r from-[#264193] to-[#5a73b5] rounded-full"></div>
+                <div className="h-1 mx-auto mb-16 md:mx-0 w-32 bg-gradient-to-r from-[#264193] to-[#5a73b5] rounded-full"></div>
+                <ContactFormModal serviziData={serviziTitles} />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-6">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="container px-4 py-6 mx-auto">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-12">
             {/* Main Content */}
             <main className="lg:col-span-3">
-              <article className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <article className="overflow-hidden bg-white shadow-sm rounded-xl">
                 <div className="p-8 md:p-10">
                   {/* Article Content with Prose */}
                   <div
